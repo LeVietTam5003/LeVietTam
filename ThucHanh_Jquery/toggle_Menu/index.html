@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="inner-width">
+                <a href="#" class="logo"><img src="https://yt3.ggpht.com/ytc/AKedOLRBU6q62KklAJtnlqOjqGZEP5iVATyvZ3qCFA10KQ=s88-c-k-c0x00ffffff-no-rj" alt=""></a>
+                <i class='menu-btn bx bx-menu'></i>
+                <nav class="navication-menu">
+                    <a href="#"><i class='bx bx-home' ></i>Home</a>
+                    <a href="#"><i class='bx bx-home' ></i>About</a>
+                    <a href="#"><i class='bx bx-home' ></i>Works</a>
+                    <a href="#"><i class='bx bx-home' ></i>Team</a>
+                    <a href="#"><i class='bx bx-home' ></i>Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".menu-btn").click(function() {
+                $(this).toggleClass("bx-window-close")
+                $(".navication-menu").slideToggle()
+            })
+        })
+    </script>
+</body>
+
+</html>

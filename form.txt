@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.sign-in input {
+            display: block;
+            width: calc(100% - 10px);
+            margin-top: 15px;
+            padding: 10px 5px;
+            border: 1px solid #ddd;
+            outline: 0;
+            font-size: 16px;
+        }
+        
+        div.sign-in button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            letter-spacing: 3px;
+            background: none;
+            border: 1px solid #000;
+            outline: none;
+            border-radius: 5px;
+            /* float: left; */
+        }
+        
+        div.sign-in button:hover {
+            background: #b29d16;
+            color: #fff;
+            border: 1px solid #00c8c8;
+            cursor: pointer;
+        }
+        
+        .sign-in {
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            margin: auto auto;
+            padding: 20px;
+            background-color: rgb(92, 150, 243);
+            box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+        }
+        
+        .sign-in span {
+            font-size: 30px;
+        }
+        
+        .enter_mail,
+        .enter_pass {
+            text-align: left;
+            color: red;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sign-in">
+        <span>SIGN IN</span>
+        <form id="in" action="#">
+            <input type="text" id="in_mail" name="" placeholder="User name...">
+            <p class="enter_mail"></p>
+            <input type="text" id="in_pass" name="" placeholder="Email...">
+            <p class="enter_pass"></p>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var objcha = {};
+
+            $("form#in").submit(function() {
+                var getEmail = $("input#in_mail").val();
+                var getPass = $("input#in_pass").val();
+                var check = 1;
+                var obj = {};
+                if (getEmail == "") {
+                    $("p.enter_mail").text("Bạn chưa nhập vào")
+                    check = 2
+                } else {
+                    $("p.enter_mail").text("");
+
+                    // check = 2
+                }
+
+                if (getPass == "") {
+                    $("p.enter_pass").text("Bạn chưa nhập vào")
+                    check = 2
+                } else {
+                    $("p.enter_pass").text("")
+
+                    // check = 2
+                }
+
+
+                if (getEmail != " " && getPass != "") {
+                    obj.xx = getEmail
+                    obj.yy = getPass
+                    console.log(obj)
+                    localStorage.setItem(getEmail, JSON.stringify(obj));
+
+                    var xx = localStorage.getItem(objcha)
+                        // nho kiem tra lay data ra co k?
+                    if (xx) {
+                        // chuyen ve lai trang thai cu
+                        xx = JSON.parse(xx)
+                            // console.log(xx)
+                    }
+                    objcha.getEmail = obj
+                }
+
+
+
+
+                if (check == 1) {
+                    return true;
+                }
+                return false
+            })
+
+
+
+            console.log(objcha)
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+tao 1 trang thu 2, qua trang nay lay data trong local ra, hien thi vao table, tham khao code file abc.html

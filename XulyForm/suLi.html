@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dang nhap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style type="text/css">
+        p {
+            background-color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // xu ly form
+            // - cho form dung lai
+            // - lay data nhap vao va kiem tra
+            //  + co thi cho form chay: true
+            //  + k thi cho dung lai va bao loi: false
+
+            $("form").submit(function(event) {
+
+                // 2 cach dung lai:
+                // - dung luon
+                event.preventDefault();
+
+                // val() là thiết lập nội dung text của tất cả phần tử được so khớp
+
+                // lay data nhap vao va kiem tra
+                // var getEmail = $("input.email").val()
+                // var getPass = $("input.pass").val()
+
+                // if (getEmail == "") {
+                //     // text: set doan text vao the html
+                //     $("p.p1").text("vui long nhap")
+                // } else {
+                //     $("p.p1").text("")
+                // }
+
+                // if (getPass == "") {
+                //     // text: set doan text vao the html
+                //     $("p.p2").text("vui long nhap")
+                // } else {
+                //     $("p.p2").text("")
+                // }
+
+                // if (getEmail != "" && getPass != "") {
+                //     return true;
+                // }
+
+                // dung tam thoi
+                // return false;
+
+            })
+
+        })
+    </script>
+
+    <body>
+
+        <form action="https://www.youtube.com/">
+            <input type="text" name="" class="email">
+            <p class="p1"></p>
+
+            <input type="text" name="" class="pass">
+            <p class="p2"></p>
+
+
+            <button type="submit">send</button>
+        </form>
+    </body>
+
+
+</html>

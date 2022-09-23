@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .demo {
+            background-color: red;
+            /* display: inline-block; */
+            margin-left: 50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // find: tim kiem the html /id/class con
+            $("li").click(function() {
+                // $("span").hide()
+                $(this).find("span").addClass("demo")
+                    // this: dai dien cho the html dang click vao
+                    // click vao the li nao thi chỉ tim the span con cua no thoi
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <style type="text/css">
+
+    </style>
+
+
+    <ul>
+        <li>menu1
+            <span>span1</span>
+        </li>
+        <li>menu2
+            <span>span1</span>
+        </li>
+        <li>menu3
+            <span>span1</span>
+        </li>
+        <li>menu4
+            <span>span1</span>
+        </li>
+    </ul>
+
+</body>
+
+
+</html>

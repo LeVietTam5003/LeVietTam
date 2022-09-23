@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- find: tim kiem the html/id/class con
+
+    closest nguoc lai, quay trở ra the cha/id/class cha
+
+    text(): lay doan text ben trong html 
+    text(123): set 123 vao ben trong the html
+
+    val(): lay value cua input
+    val(123): set 123 vao value -->
+    <div style="width:500px;">div (great-grandparent)
+        <ul class="xx">ul (second ancestor - second grandparent)
+            <ul>ul (first ancestor - first grandparent)
+                <span>Không vó gì</span>
+                <li class="click">li (direct parent)
+                    <span>doan text can lay</span>
+                    <input type="text" name="Lê viết Tâm" value="0763553858">
+                    <img src="xxy.png">
+                </li>
+
+                <li>li (direct parent)
+                    <span>doan text can lay</span>
+                    <input type="text" id=" Tâm lê Viết" value="01202792212">
+                    <img src="xxx.png">
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // find: tim kiem the html/id/class con
+
+            // closest nguoc lai, quay trở ra the cha/id/class cha
+
+            // text(): lay doan text ben trong html 
+            // text(123): set 123 vao ben trong the html
+
+            // val(): lay value cua input
+            // val(123): set 123 vao value
+
+            $("li").click(function() {
+                // Khi kích thẻ li thì tìm đến cái thẻ ul cha có class ... nào đó và cho css vào
+                // $("li").closest("ul.xx").css({
+                //     "color": "red",
+                //     "border": "2px solid red"
+                // });
+
+                // var xx = $("li").closest("ul.xx").find("span").text()
+
+                // var xx = $("li").find("span").text()
+                // alert(xx)
+                // $("li").find("span").text("oanh")
+
+                // var xx = $("li").find("input").val()
+                // alert(xx)
+                // $(this).find("input").val("111111")
+
+                // kích vào li đó chạy lên cái ul rồi ngó xuống thẻ con có tìm kiếm cái thẻ im g rồi đưa ra cái src
+                // var xx = $("li").closest("ul.xx").find("img").attr("src")
+                // alert(xx)
+
+                // Khi mà click vào thẻ li thì mình tìm đến cái phần img của cái li đó và hiển thị ra src đó có gì
+                // var xx = $(this).find("img").attr("src")
+                // alert(xx)
+
+                // Khi mà click vào thẻ li thì mình tìm đến cái phần img của cái li đó và hiển thị ra value đó có gì
+                // var xx = $(this).find("input").attr("value")
+                // alert(xx)
+
+                // Khi mà click vào thẻ li thì mình tìm đến cái phần img của cái li đó và hiển thị ra name đó có gì
+                var xx = $(this).find("input").attr("id")
+                alert(xx)
+            })
+
+        });
+    </script>
+</body>
+
+</html>

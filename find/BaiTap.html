@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        ul {
+            background-color: yellow;
+            list-style: none;
+        }
+        
+        li {
+            cursor: pointer;
+            /* height: 50px; */
+            border: 1px solid #ddd;
+            display: block;
+        }
+        
+        span {
+            background-color: red;
+            display: none;
+            margin-left: 50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // yeu cau:
+            // - click vao LI nao thi tim tới SPAN con của nó va show ra
+            // - click vao LI khac thi tim tới SPAN con của nó va show ra, nhung HIDE nhưng span khac di
+            // - click vao Li dang có SPAN con SHOW thi hide span do lai
+
+            $("li").click(function() {
+                    $("span").hide(500)
+                    var ktra = $(this).hasClass("tam")
+                    if (ktra == true) {
+                        $(this).find("span").hide()
+                        $(this).find("span").removeClass("tam")
+                    } else {
+                        $(this).find("span").show()
+                        $(this).find("span").addClass("tam")
+                    }
+                })
+                // alert($('#id-hasclass').hasClass('demo'));
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- <div class="demo testing"></div> -->
+
+
+    <ul>
+        <li>menu1
+            <span>span1</span>
+        </li>
+        <li>menu2
+            <span>span1</span>
+        </li>
+        <li>menu3
+            <span>span1</span>
+        </li>
+        <li>menu4
+            <span>span1</span>
+        </li>
+    </ul>
+
+</body>
+
+
+</html>

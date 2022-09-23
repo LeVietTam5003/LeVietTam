@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển Thị</title>
+    <style>
+        .left {
+            text-align: left;
+        }
+        
+        .boder {
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+
+<!-- 
+        tao 1 trang thu 2, 
+        qua trang nay lay data trong local ra, 
+        hien thi vao table, 
+        tham khao code file abc.html
+     -->
+
+<title></title>
+<!-- goi file css -->
+<!-- goi js -->
+
+
+
+</head>
+
+<body>
+    <table align="center" width="400px" border="1">
+        <thead align="center">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody align="center" class="left">
+
+        </tbody>
+    </table>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Tạo biến để lấy dử liệu trên localStorage có key là xx xuống
+            var down = localStorage.getItem("xx")
+                // nho kiem tra lay data ra co k?
+            if (down) {
+                // chuyen ve lai trang thai cu
+                down = JSON.parse(down)
+                    // console.log(down)
+            }
+            // tạo 1 biến rỗng để lưu trử dử liệu chứa value
+            var html = '';
+            // Đung map để lấy các value trong xx và yy ra
+            Object.keys(down).map(function(key, index) {
+                    // chen` them html vao
+                    // de noi 1 chuoi va bien thi dung +
+
+                    // html += "<p>" +
+                    //             "<a>" + objCha[key]['username'] + "</a>" +
+                    //         "</p>";
+
+                    //    Tạo tr,td và lấy dử liệu value bỏ vào
+                    html +=
+                        "<tr>" +
+                        "<td>" + down[key]['xx'] + "</td>" +
+                        "<td>" + down[key]['yy'] + "</td>" +
+                        "</tr>";
+                })
+                //hien thi all
+                // console.log(html)
+                // text()
+
+            //Nội dung thêm vào không bắt buộc phải là phần tử HTML
+            $("table tbody").append(html);
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .demo {
+            background-color: red;
+        }
+    </style>
+    <!-- jquery:thi goi thu vien cua jquery vao -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <script>
+        // khai bao 1 bien thi dung var
+        // biên và số thi k đặt trong dấu ""
+
+        // var x = 2;
+        // var y = 2;
+
+        // tong = x + y;
+        //alert(tong) //: thong bao lenman hinh
+
+        //console.log(tong) //: hien thi thong bao dưới thanh console, de lap trinh vien xem
+
+        // 1 so bieu thuc so sanh trong if else:
+        // ==, != , &&, ||,  >, >= ,<, <=, *, /
+        // %: chia lay phan du
+
+        // if (tong % 2 == 0) {
+        // alert("day la so chan " + tong)
+        // } else {
+        // alert("day la so le")
+        // }
+
+        // cho 1 số tự nhiên N.
+        // - viet ham kiem tra neu N > 100 thi kiem tra tiep:
+        //  + neu N la so chẵn thi in ra số chăn
+        //  + neu N la so le thi in ra số le
+
+        // - else nêu N < 100 thi kiem tra tiep:
+        //  + neu N la so chẵn thi in ra số chăn
+        //  + neu N la so le thi in ra số le
+
+        // var N = 101;
+        // if (N > 100) {
+        //     if (N % 2 == 0) {
+        //         alert(N + "day la so chan > 100")
+        //     } else {
+        //         alert(N + "day la so le > 100")
+        //     }
+        // } else {
+        //     if (N % 2 == 0) {
+        //         alert(N + "day la so chan < 100")
+        //     } else {
+        //         alert(N + "day la so le < 100")
+        //     }
+        // }
+
+
+
+
+        // cho 1 số tự nhiên N.
+        // - viet ham kiem tra neu N > 100 thi kiem tra tiep:
+        //  + neu N la so chẵn thi in ra số chăn
+        //  + neu N la so le thi in ra số le
+
+        // - else nêu N < 100 thi kiem tra tiep:
+        //  + neu N la so chẵn thi in ra số chăn
+        //  + neu N la so le thi in ra số le
+
+        // var x = 0;
+        // var y = 10;
+
+        // tong = x + y;
+        // alert(tong);
+
+
+        // cho 1 số tự nhiên N.
+        // var N = 11;
+        // - viet ham kiem tra neu N > 100 thi kiem tra tiep:
+        // if (N > 100) {
+        //  + neu N la so chẵn thi in ra số chăn
+        // if (N % 2 == 0) {
+        //     alert(N + " là số chẳn > 100")
+        // }
+        //  + neu N la so le thi in ra số le
+        //     else alert(N + " là số lẻ > 100")
+        // } else {
+        //  + neu N la so chẵn thi in ra số chăn
+        // if (N % 2 == 0) {
+        //     alert(N + " là số chẳn < 100")
+        // }
+        //  + neu N la so le thi in ra số le
+        //     else alert(N + " là số lẻ < 100")
+        // }
+
+        // Bài 1 Kiểm tra năm nay có phải năm chẵn hay lẻ , xuất ra mà hình chẳn hay lẻ
+        // b1 Nhập năm
+        //b2 chia cho 2 và lấy dư
+        //b3 kiểm tra số dư có bằng 0 hay không . Nếu bằng 0 là năm chẳn ngược lại là lẻ
+        // var nam = 2022;
+        // if (nam % 2 == 0) {
+        //     alert("Năm " + nam + " Là năm chẳn")
+        // } else {
+        //     alert("Năm " + nam + " Là năm lẻ")
+        // }
+
+        // Nhập vào 1 màu và kiểm tra
+        // Nếu là màu xanh thì xuất ra màn hình dòng chử đây là màu xanh
+        // Nếu là màu đỏ thì xuất ra màn hình dòng chử đây là màu đỏ
+        // Nếu là màu vàng thì xuất ra màn hình dòng chử đây là màu vàng
+        // Nếu là màu xanh thì xuất ra màn hình dòng chử đây là màu còn lại
+
+
+        //Bai1
+        // var nam = 2022;
+        // if (nam % 2 == 0) {
+        //     alert("Năm " + nam + " Là năm chẳn")
+        // } else {
+        //     alert("Năm " + nam + " Là năm lẻ")
+        // }
+        //bai2
+        // var color = "màu đỏ"
+        // if (color == "màu xanh") {
+        //     alert("Đây là " + color)
+        // } else if (color == "màu đỏ") {
+        //     alert("Đây là " + color)
+        // } else if (color == "màu vàng") {
+        //     alert("Đây là " + color)
+        // } else {
+        //     alert("Đây là còn lại")
+        // }
+        //Bai3
+        // var nhapSo = 11;
+
+        // if (nhapSo > 100) {
+        //     if (nhapSo % 2 == 0) {
+        //         alert(nhapSo + " là số chẳn > 100")
+        //     } else alert(nhapSo + " là số lẻ > 100")
+        // } else {
+        //     if (nhapSo % 2 == 0) {
+        //         alert(nhapSo + " là số chẳn < 100")
+        //     } else alert(nhapSo + " là số lẻ < 100")
+        // }
+        //Bai4
+        // var nam = 2020
+        // if ((nam % 4 == 0 || nam % 400 == 0) && nam % 100 != 0) {
+        //     alert("Đây là năm nhuận")
+        // } else
+        //     alert("Đây là năm không nhuận")
+
+
+
+        // Dùng for in ra các số từ 1 đến 10
+        // for (var i = 1; i <= 10; i++) {
+        //     console.log(i)
+        // }
+        // Dùng for in ra các số chẵn từ 1 đến 10
+        // for (var i = 1; i <= 10; i++) {
+        //     if (i % 2 == 0) {
+        //         console.log(i)
+        //     }
+        // }
+        // Dùng for in ra các số chẵn từ 1 đến 10
+        // var tong = 0
+        // for (var i = 1; i <= 10; i++) {
+        //     if (i % 2 == 0) {
+        //         tong += i
+        //     }
+        // }
+        // console.log("Tổng trong vòng lăp = " + tong)
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % 2 == 0) {
+        //         console.log(i)
+        //     }
+        // } 
+        // Dùng for in ra các số chẵn từ 1 đến 10
+
+        // S = 1 + 1/2 + 1/3 + 1/4 +… 1/n
+        // var tong = 0
+        // for (var i = 1; i <= 5; i++) {
+        //     tong = tong + 1 / i;
+        // }
+        // console.log(tong)
+
+        // var a = 20,
+        //     b = 3,
+        //     c = 10
+        // cách 1
+        // if (a > b && a > c) {
+        //     alert(a + " là số lớn nhất")
+        // } else {
+        //     if (b > c) {
+        //         alert(a + " là số lớn nhất")
+        //     } else {
+        //         alert(c + " là số lớn nhất")
+        //     }
+        // }
+
+        // Cách 2
+        // if (a > b && a > c) {
+        //     alert(a + " là số lớn nhất")
+        // }
+        // if (b > a && b > c) {
+        //     alert(b + " là số lớn nhất")
+        // }
+        // if (c > a && c > b) {
+        //     alert(c + " là số lớn nhất")
+        // }
+
+
+
+        // function timSoLonNhat(a, b, c) {
+        //     if (a > b && a > c) {
+        //         alert(a + " là số lớn nhất")
+        //     } else {
+        //         if (b > c) {
+        //             alert(b + " là số lớn nhất")
+        //         } else {
+        //             alert(c + " là số lớn nhất")
+        //         }
+        //     }
+        // }
+        // timSoLonNhat(9, 10, 20)
+
+        // function tinhtong(number) {
+        //     var tong = 0
+        //     for (var i = 1; i <= number; i++) {
+        //         tong = tong + i
+        //     }
+        //     alert(tong);
+        // }
+
+        // tinhtong(10);
+
+        // var arr = [100, 15, 2, 12, 600]
+        // var max = 0
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] > max) {
+        //         max = arr[i]
+        //     }
+        // }
+
+
+
+
+        //
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

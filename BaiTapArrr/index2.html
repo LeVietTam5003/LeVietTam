@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 2</title>
+</head>
+
+<body>
+    <script>
+        // - Tạo tiếp 1 trang index2.html :
+        //  + gọi obj trong localstora ở bài 1 ra( nhớ phải kiêm tra )
+        var xx = localStorage.getItem("tam1")
+            // nho kiem tra lay data ra co k?
+        if (xx) {
+            // chuyen ve lai trang thai cu
+            xx = JSON.parse(xx)
+            console.log(xx)
+        }
+        //  + Dùng map để duyêt và hiển thị các value và key dưới dạng console 
+        // Object.keys(xx).map(function(key, index) {
+        //         console.log(xx[key])
+        //     })
+
+        // console.log(Object.keys(xx))
+        // sau đo add thêm 1 ọbj mới vào obj cũ trc đó và đưa vao localstora.
+        var obj2 = {
+            name2: "Le Viet Tam",
+            phone2: +8463553858,
+            gender2: true,
+            age2: 21,
+        }
+
+        xx.tam2 = obj2;
+        localStorage.setItem("tam2", JSON.stringify(obj2))
+    </script>
+</body>
+
+</html>

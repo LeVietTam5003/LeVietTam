@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .demo {
+            background-color: #ccc;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>addclass thêm class vào thẻ html</div>
+        <div>removeclass xóa class vào thẻ html</div>
+        <div>hide ấn thẻ </div>
+        <div>show hiện thẻ</div>
+        <div>slideUp ẩn thẻ chuyển động nhẹ nhàng </div>
+        <div>slideDown hiện ảnh chuyern động nhẹ nhàng</div>
+        <div>hasClass là kiểm tra class của thẻ đó có trong thẻ html không </div>
+    </div>
+    <p>Học lập trình với jqquery</p>
+
+    <button class="add">Thêm</button>
+    <button class="remove">Xóa</button>
+
+    <!-- Muốn viết Jquery phải thêm thư viện vào -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button.add").click(function() {
+                // $("p").addClass("demo")
+                $("p").hide(function() {
+                        alert("bạn đả ẩn thẻ")
+                    })
+                    // $("p").slideUp()
+            })
+            $("button.remove").click(function() {
+                // $("p").removeClass("demo")
+                // $("p").show()
+                $("p").slideDown(function() {
+                    alert("bạn đả mở thẻ")
+                })
+
+                //Tạo 1 biến để lưu trử thẻ hasclass
+                // Kiểm tra thử nếu mà có class đó trong thẻ html thì xóa
+                // và ktra nếu thẻ đó k có trong thẻ html thì thêm vào
+                // var ktra = $("p").hasClass("demo")
+                if (ktra == true) {
+                    $("p").removeClass("demo")
+                } else {
+                    $("p").addClass("demo")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

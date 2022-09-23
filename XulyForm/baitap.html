@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="title">
+            <h2>GÓP Ý LIÊN HỆ VỚI 22H</h2>
+        </div>
+        <form action="https://www.youtube.com/">
+            <div class="contact_enter">
+                <label class="form__label" for="name">Họ và tên</label>
+                <input type="text" class="hoTen">
+                <p class="check1"></p>
+            </div>
+            <div class="contact_enter">
+                <label class="form__label" for="name">Địa chỉ email</label>
+                <input type="text" class="email">
+                <p class="check2"></p>
+            </div>
+            <div class="contact_enter">
+                <label class="form__label" for="name">Số điện thoại</label>
+                <input type="text" class="soDienThoai">
+                <p class="check3"></p>
+            </div>
+            <div class="contact_enter">
+                <label class="form__label" for="name">Địa chỉ nơi cư trú</label>
+                <input type="text" class="Diachi">
+                <p class="check4"></p>
+            </div>
+            <div class="contact_enter">
+                <label class="form__label" for="name">Tiêu đề</label>
+                <input type="text" class="tieuDe">
+                <p class="check5"></p>
+            </div>
+            <div class="contact_enter">
+                <label class="form__label" for="name">Nội dung</label>
+                <textarea type="text" class="noiDung" cols="30" rows="10"></textarea>
+                <p class="check6"></p>
+            </div>
+            <div class="contact_enter1">
+                <button type="submit" class="xanh">Gửi</button>
+                <button class="Da">Thoát</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./baitap.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+
+            $("form").submit(function() {
+                var getht = $("input.i1").val();
+                var getđcmail = $("input.i2").val();
+                var getsđt = $("input.i3").val()
+                var getđcnct = $("input.i4").val();
+                var gettđ = $("input.i5").val();
+                var getnd = $("textarea.i6").val();
+
+
+                var xx = 1;
+
+                if (getht == "") {
+                    $("p.p1").text("vui long nhap")
+                    xx = 2;
+
+                } else {
+                    $("p.p1").text("")
+                };
+                if (getđcmail == "") {
+                    $("p.p2").text("vui long nhap")
+                    xx = 2;
+
+                } else {
+                    $("p.p2").text("")
+                };
+                if (getsđt == "") {
+                    $("p.p3").text("vui long nhap")
+                    xx = 2;
+
+                } else {
+                    $("p.p3").text("")
+                };
+                if (getđcnct == "") {
+                    $("p.p4").text("vui long nhap")
+                    xx = 2;
+
+                } else {
+                    $("p.p4").text("")
+                };
+
+                if (gettđ == "") {
+                    $("p.p5").text("vui long nhap")
+                    xx = 2;
+                } else {
+                    $("p.p5").text("")
+                };
+
+                if (getnd == "") {
+                    $("p.pxd6").text("vui long nhap")
+                    xx = 2;
+                } else {
+                    $("p.p6").text("")
+                }; -->
+
+    <!-- console.log(xx) // => 2 neu co 1 input nao chua nhap // => 1 neu tat ca da nhap het if (xx == 1) { return true } return false; }) }) -->
+    <!-- </script> -->
+
+</body>
+
+</html>

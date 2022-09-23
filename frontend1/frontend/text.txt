@@ -1,0 +1,110 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var sumObject = 0;
+            var loat = localStorage.getItem("xx");
+            if (loat) {
+                loat = JSON.parse(loat);
+                var html = '';
+                Object.keys(loat).map(function(key, index) {
+                    var ret = loat[key]['price'].replace('$', '');
+                    sumCart = ret * loat[key]['qty'];
+                    sumObject += sumCart;
+                    html += "<tr>" +
+                        "<td class='cart_product'><a><img src='" + loat[key]['img'] + "' alt=''></a></td>" +
+                        "<td class='cart_description'><h4><a>" + loat[key]['name'] + "</a></h4><p id='idkey'>" + key + "</p></td>" +
+                        "<td class='cart_price'><p>" + loat[key]['price'] + "</p></td>" +
+                        "<td class='cart_quantity'><div class='cart_quantity_button'><a class='cart_quantity_up'> + </a><input class='cart_quantity_input' name='quantity' value='" + loat[key]['qty'] + "' autocomplete='off' size='2'><a class='cart_quantity_down' > - </a></div></td>" +
+                        "<td class='cart_total'><p class='cart_total_price'>" + "$" + sumCart + "</p></td>" +
+                        "<td class='cart_delete'><a class='cart_quantity_delete'><i class='fa fa-times'></i></a></td>" +
+                        "</tr>"
+                })
+                $("table tbody").append(html);
+            }
+
+            $("a.cart_quantity_up").click(function() {
+                var getqty = parseInt($(this).closest("td").find("input.cart_quantity_input").val());
+                var getPrice = $(this).closest("tr").find("td.cart_price").find("p").text();
+                var delete_$_Price = getPrice.replace('$', '');
+                var tongtotal = 0;
+                var getdown = localStorage.getItem("xx");
+                Qty_New = getqty + 1;
+                var sumQty = delete_$_Price * Qty_New;
+
+                $(this).closest("td").find("input.cart_quantity_input").val(Qty_New);
+                $(this).closest("tr").find("td").find("p.cart_total_price").text(sumQty + "$");
+                var getId = $(this).closest("tr").find("td").find("p#idkey").text();
+
+                if (getdown) {
+                    getdown = JSON.parse(getdown);
+                    Object.keys(getdown).map(function(key, index) {
+                        if (getId == key) {
+                            getdown[key]['qty'] += 1;
+                        }
+                        tongtotal += getdown[key]['qty'] * getdown[key]['price'].replace('$', '');
+                        sumObject = tongtotal;
+                    })
+                    $('html').find(".sumTotal").text(sumObject + '$');
+                }
+                localStorage.setItem("xx", JSON.stringify(getdown))
+            })
+            $("a.cart_quantity_down").click(function() {
+                var getqty = parseInt($(this).closest("td").find("input.cart_quantity_input").val());
+                var getPrice = $(this).closest("tr").find("td.cart_price").find("p").text();
+                var delete_$_Price = getPrice.replace('$', '');
+                var tongtotal = 0;
+                var getdown = localStorage.getItem("xx");
+                var getId = $(this).closest("tr").find("td").find("p#idkey").text();
+                if (getqty > 1) {
+                    Qty_New = getqty - 1;
+                    var sumQty = delete_$_Price * Qty_New;
+                    $(this).closest("td").find("input.cart_quantity_input").val(Qty_New);
+                    $(this).closest("tr").find("td").find("p.cart_total_price").text(sumQty + "$");
+                    if (getdown) {
+                        getdown = JSON.parse(getdown);
+                        Object.keys(getdown).map(function(key, index) {
+                            if (getId == key) {
+                                getdown[key]['qty'] -= 1;
+                            }
+                            tongtotal += getdown[key]['qty'] * getdown[key]['price'].replace('$', '');
+                            sumObject = tongtotal;
+                        })
+                        $('html').find(".sumTotal").text(sumObject + '$');
+                        localStorage.setItem("xx", JSON.stringify(getdown))
+                    }
+                } else {
+                    if (getdown) {
+                        getdown = JSON.parse(getdown);
+                        delete getdown[getId];
+                        Object.keys(getdown).map(function(key, index) {
+                            tongtotal += getdown[key]['qty'] * getdown[key]['price'].replace('$', '');
+                            sumObject = tongtotal;
+                        })
+                    }
+                    $(this).closest("tr").remove();
+                    $('html').find(".sumTotal").text(sumObject + '$');
+                    localStorage.setItem("xx", JSON.stringify(getdown))
+                }
+                sumObject = tongtotal;
+                localStorage.setItem("xx", JSON.stringify(getdown))
+                $('html').find(".sumTotal").text(sumObject + '$');
+            })
+            $("a.cart_quantity_delete").click(function() {
+                var tongtotal = 0;
+                var getId = $(this).closest("tr").find("td").find("p#idkey").text();
+                var getdown = localStorage.getItem("xx")
+                if (getdown) {
+                    getdown = JSON.parse(getdown);
+                    delete getdown[getId];
+                    Object.keys(getdown).map(function(key, index) {
+                        tongtotal += getdown[key]['qty'] * getdown[key]['price'].replace('$', '');
+                    })
+                }
+                $(this).closest("tr").remove();
+                sumObject = tongtotal;
+                localStorage.setItem("xx", JSON.stringify(getdown))
+                $('html').find(".sumTotal").text(sumObject + '$');
+            })
+            $('html').find(".sumTotal").text(sumObject + '$');
+        })
+    </script>

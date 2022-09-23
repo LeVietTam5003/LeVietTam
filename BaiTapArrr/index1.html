@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 1</title>
+</head>
+
+<body>
+    <script>
+        // Tạo obj bằng rỗng.   
+        // Sau đó thêm 4 key va value vào obj để tạo 1 obj đa cấp +
+        // Đưa obj đa cấp đó vào localstorages
+
+        var obj = {};
+        obj.name = "Le Viet Tam";
+        obj.email = "tamleviet238@gmail.com";
+        obj.phone = 840763553858;
+        obj.gender = true;
+
+        // console.log(obj)
+        localStorage.setItem("tam1", JSON.stringify(obj))
+
+        // // ---------------------------------------------- //
+    </script>
+</body>
+
+</html>

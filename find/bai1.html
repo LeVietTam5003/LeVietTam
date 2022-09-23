@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2>jQuery find() Method to Multiple Descendant Elements.</h2>
+    <ul>
+        <li><em>Welcome to TutorialDeep!</em></li>
+        <li><b>Learn jQuery</b> with live examples.</li>
+        <li><span class="kich">Last </span>Use examples on your project</li>
+        <li>This is <span>Last</span> li element.</li>
+    </ul>
+    <button>Kích</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function doimauSpan() {
+                $("ul").css("color", "red");
+            }
+
+            function doimauSpanLai() {
+                $("ul").css("color", "#ddd");
+            }
+            $("button").click(function() {
+                var ktra = $("h2").hasClass("tam")
+                if (ktra == false) {
+                    $("h2").addClass("tam")
+                    $("h2").hide(500)
+                    doimauSpanLai()
+                } else {
+                    $("h2").removeClass("tam")
+                    $("h2").show(500)
+                    doimauSpan()
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

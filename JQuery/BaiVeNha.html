@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .native {}
+        /* a {
+            text-decoration: none;
+            padding: 2px 10px;
+            background-color: rgb(90, 85, 85);
+            color: #fff;
+            border-radius: 5px;
+        }
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 20px;
+            padding: 10px 20px;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam in harum ratione quod, consectetur reprehenderit error nesciunt esse fuga qui! Ut aperiam reiciendis sequi esse eligendi dolores nesciunt quae nostrum!</div>
+    <button class="kich">Kích</button>
+
+
+    <!-- <a href="#">Kích</a> -->
+
+    <ul>
+        <li class="l1">Màu 1</li>
+        <li class="l2">Màu 2</li>
+        <li class="l3">Màu 3</li>
+        <li class="l4">Màu 4</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button.kich").click(function() {
+                var ktra = $("div").hasClass("demo")
+                if (ktra) {
+                    $("div").removeClass("demo")
+                    $("div").show(500)
+                    $("div").show(500)
+                    $("ul").show()
+                } else {
+                    $("div").addClass("demo")
+                    $("div").hide(500)
+                    $("ul").hide(500)
+                }
+            })
+
+
+            // Bài 1
+            // $("a").click(function() {
+            //     var ktra = $("a").hasClass("native")
+            //     if (ktra == false) {
+            //         $("a").addClass("native")
+            //     } else {
+            //         $("a").removeClass("native")
+            //     }
+            // })
+            // Bài 2
+            // $("a").click(function() {
+            //         var ktra = $("a").hasClass("native")
+            //         if (ktra == false) {
+            //             $("a").addClass("native")
+            //             $("p").hide(500)
+            //         } else {
+            //             $("a").removeClass("native")
+            //             $("p").show(500)
+            //         }
+            //     })
+            //  Bài 3
+
+
+            // $("li.l1").click(function() {
+            //     $("li.l1").css({
+            //         "background-color": "blue"
+            //     });
+            // })
+            // $("li.l2").click(function() {
+            //     $("li.l2").css({
+            //         "background-color": "blue"
+            //     });
+            // })
+            // $("li.l3").click(function() {
+            //     $("li.l3").css({
+            //         "background-color": "red"
+            //     });
+            // })
+            // $("li.l4").click(function() {
+            //     $("li.l4").css({
+            //         "background-color": "Orange"
+            //     });
+            // })
+
+            // $("button.kich").click(function() {
+            //     var ktra = $("div").hasClass("tam")
+            //     if (ktra) {
+            //         $("div").removeClass("tam")
+            //             // $("div").show(500)
+            //         $("div").slideDown()
+
+            //     } else {
+            //         $("div").addClass("tam")
+            //             // $("div").hide(500)
+            //         $("div").slideUp()
+            //     }
+            // })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+-node_modules: bộ core của source code nay, mình k đụng vào.
+
+-src: chứa file index.html : đây là trang chủ của phần này va nhung css hình anh đều bỏ
+ vao trong nay, va goi css vào trong file index.html
+
+-src: chứa component(la các doan html dc chia nhỏ va viet ben trong js)
+
+co file html:
+header.js
+content.js
+footer.js
+
+va se goi nhưng file nay vao file index.js, để nó buil va hiển thi lên màn hình
+
+
+Muốn nhúng vào thì phải thêm 1 cái ...js,.html vào trong thằn index.js để chạy chương trình

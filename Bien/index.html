@@ -1,0 +1,40 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    // Biến toàn cục // var global = "Đây là biến toàn cục"; // Hàm có sử dụng biến cục bộ // function add_local() { // var local = "Đây là biến cục bộ"; // alert(local); // } // Gọi fuction sử dụng biến cục bộ // add_local(); // In biến toàn cục // alert(global);
+    // function localA() { // var a = "Đây là local A " // return a // } // function localB() { // var b = localA() // alert(b + "và Biến A đã sang B") // } // localB() // bien toan cuc, co the su dung bat ky dau/
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function() {
+
+
+                var xx = 1;
+                var zz = "";
+                $("form1").submit(function(event) {
+                    // bien cuc bo va su dung dc ben trong nay
+                    var yy = 2;
+
+                    zz = yy;
+
+                })
+
+                $("form2").submit(function(event) {
+                        // console.log(yy) => ? undefined(k xac dinh)
+                        console.log(zz) //=> 2
+                    })
+                    //  mình muốn truyền biến cục bộ từ hàm này sang hàm khác thì mình phải đặt biến rỗng làm trung gian để lưu giá trị của 
+            }) // biến đó
+    </script>
+</body>
+
+</html>

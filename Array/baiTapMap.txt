@@ -1,0 +1,20 @@
+- Tạo 1 trang index.html:
+ +  tạo obj bằng rỗng.
+ + Sau đó thêm 4 key va value vào obj để tạo 1 obj đa cấp
+  + Đưa obj đa cấp đó vào localstorage
+
+- Tạo tiếp 1 trang index2.html :
+  + gọi obj trong localstora ở bài 1 ra( nhớ phải kiêm tra )
+  + Dùng map để duyêt và hiển thị các value và key dưới dạng console 
+  + sau đo add thêm 1 ọbj mới vào obj cũ trc đó và đưa vao localstora.
+	
+-Tao index3.html: 
+  + lây obj trong localstora ra (chu y kiem tra)
+  + console xem có obj đã thêm trong bài 2 chưa?
+  + Dùng map để duyêt và hiển thị các value và key dưới dạng console
+  + Sau đó tim cách xoá 1 obj, ( xoá obj bằng key).
+  + Rôi dua obj vao tiếp localstora
+
+-Tạo index4.html : 
+ + lây obj : tuong tu cac phan trc do
+ + hiển thị ra xem đã xoá thằng obj ở bài 3 chưa?

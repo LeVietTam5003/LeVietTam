@@ -1,0 +1,13 @@
+click register:
+- hien thi all loi ra duoi input, neu input chua nhap
+- neu 2 pass da nhap roi, thi tien hanh so sanh:
+  + neu khac nhau thi => loi "2 pass k trung nhau"
+
+-> ok het thi thong bao : " dk thanh cong" va luon cho return false;
+
+click login
+- hien thi all loi ra duoi input, neu input chua nhap
+- neu da nhap het roi thi tien hanh kiem tra:
+    + neu email va pass nhap vao dong` thoi` cung bang voi email va pass ben register
+    thi thong bao "login thanh cong"
+    + else: " login that bai"

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="https://www.youtube.com/">
+        <input type="text" name="" class="email">
+        <p class="p1"></p>
+
+        <input type="text" name="" class="pass">
+        <p class="p2"></p>
+
+        <button type="submit">send</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        // xu ly form 
+        // - cho form dung lai 
+        // * Có 2 cách dừng lại
+        // * Dừng luôn
+        // $("form").submit(function(event) {
+        //         // event.preventDefault();
+        //     })
+        // *Dừng tạm thời
+        // $(document).ready(function() {
+        //     $("form").submit(function(event) {
+        //         return false
+        //     })
+        // })
+        // $(document).ready(function() {
+        //     $("form").submit(function(event) {
+        //         return true
+        //     })
+        // })
+
+
+        // Lấy data nhập vào và kiểm tra
+        // Tạo biến để kiểm tra xem có nhập dử liệu vào trong bảng Email hay không
+        // val() là thiết lập nội dung text của tất cả phần tử được so khớp
+        $(document).ready(function() {
+                $("form").submit(function(event) {
+                    // Tạo biến để kiểm tra xem input email có nhập dử liệu vào trong bảng Email hay không
+                    var getEmail = $("input.email").val()
+                        // Tạo biến để kiểm tra xem input pass có nhập dử liệu vào trong bảng Email hay không
+                    var getPass = $("input.pass").val()
+                    if (getEmail == "") {
+                        // text: set đoạn text vào văn bản
+                        $("p.p1").text("Vui lòng nhập vào")
+                    } else {
+                        // nhập vào email vào rồi thì text rỗng
+                        $("p.p1").text("")
+                    }
+                    if (getPass == "") {
+                        $("p.p2").text("Vui lòng nhập vào")
+                    } else {
+                        $("p.p2").text("")
+                    }
+                    // Nếu kiểm tra 2 cái khác rổng thì đăng nhạp vào
+                    if (getEmail != "" && getPass != "") {
+                        return true;
+                    }
+                    // dung tam thoi
+                    // Ban đầu chưa có gì hết thì cho nó dừng tạm thời
+                    return false;
+                })
+            })
+            // + co thi cho form chay: true
+            // + k thi cho dung lai va bao loi: false
+    </script>
+</body>
+
+</html>

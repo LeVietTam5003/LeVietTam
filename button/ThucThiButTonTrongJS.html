@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        
+    </style>
+    <!-- goi thu vien jquery vao -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+       function sayhello(x, y, z){
+        if(z == true){
+            // goi ham trong ham
+            tinhtong(x, y)
+        }else{
+            tinhnhan(x, y)
+        }
+        
+       }
+
+       // chia nho ra tiep
+
+       function tinhtong(x, y){
+            tong = x + y;
+            alert(tong)
+       }
+
+        function tinhnhan(x, y){
+            tong = x * y;
+            alert(tong)
+        }
+
+        function tinhtong110(a, b){
+            sum = 0;
+            for (var i = a; i < b; i++) {
+                sum = sum + i;
+            }
+            console.log(sum)
+        }
+    </script>
+</head>
+<body>
+   
+
+   <!-- function: thuc thi nhiem vu cua su kien -->
+   <!-- su kien: 1 so hanh dong tac dong vao the html: click, change -->
+
+   <!-- viet 1 su kien click(onclick) thi ham sayhello se chay -->
+   <!-- ham sayhello se nhan vao 2 tham so -->
+   <button onclick="sayhello(1, 2, true)">tinh tong 1 va 2</button>
+   <button onclick="sayhello(3, 2, false)">tinh nhan 3 va 3</button>
+
+   <a onclick="tinhtong110(1, 10)">tinh tong 1 toi 10</a>
+
+</body>
+
+</html>
+
+<!-- html css responsive bootstrap:
+4 trang: 2 
+responsive
+boostrap
+ -->

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .khongBietlam {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .khongBietlamthiet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="khongBietlam">
+        <div class="khongBietlamthiet">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                    <tr>
+                        <td>
+                            EmployeeId
+                        </td>
+                        <td>
+                            FirstName
+                        </td>
+                        <td>
+                            LastName
+                        </td>
+                        <td>
+                            Address1
+                        </td>
+                        <td>
+                            Address2
+                        </td>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            PhoneNumber
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var html = '';
+            const data = [{
+                "employeeId": 1,
+                "firstName": "Anh",
+                "lastName": "Tuan",
+                "address1": "Quang Nam",
+                "address2": "Da Nang",
+                "email": "voanhtuan1@gmail.com",
+                "phoneNumber": "123456700"
+            }, {
+                "employeeId": 2,
+                "firstName": "Viet",
+                "lastName": "Tam",
+                "address1": "Da Nang",
+                "address2": "Quang Nam",
+                "email": "leviettam1@gmail.com",
+                "phoneNumber": "13782641"
+            }, {
+                "employeeId": 3,
+                "firstName": "Anh3",
+                "lastName": "Tuan3",
+                "address1": "Quang Nam3",
+                "address2": "Da Nang3",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456700"
+            }, {
+                "employeeId": 4,
+                "firstName": "Anh4",
+                "lastName": "Tuan4",
+                "address1": "Quang Nam4",
+                "address2": "Da Nang4",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456701"
+            }, {
+                "employeeId": 5,
+                "firstName": "Anh5",
+                "lastName": "Tuan5",
+                "address1": "Quang Nam5",
+                "address2": "Da Nang5",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456702"
+            }, {
+                "employeeId": 6,
+                "firstName": "Anh6",
+                "lastName": "Tuan6",
+                "address1": "Quang Nam6",
+                "address2": "Da Nang6",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456703"
+            }, {
+                "employeeId": 7,
+                "firstName": "Anh7",
+                "lastName": "Tuan7",
+                "address1": "Quang Nam7",
+                "address2": "Da Nang7",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456704"
+            }, {
+                "employeeId": 8,
+                "firstName": "Anh8",
+                "lastName": "Tuan8",
+                "address1": "Quang Nam8",
+                "address2": "Da Nang8",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456705"
+            }, {
+                "employeeId": 9,
+                "firstName": "Anh9",
+                "lastName": "Tuan9",
+                "address1": "Quang Nam9",
+                "address2": "Da Nang9",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456706"
+            }, {
+                "employeeId": 10,
+                "firstName": "Anh10",
+                "lastName": "Tuan10",
+                "address1": "Quang Nam10",
+                "address2": "Da Nang10",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456707"
+            }, {
+                "employeeId": 11,
+                "firstName": "Anh11",
+                "lastName": "Tuan11",
+                "address1": "Quang Nam11",
+                "address2": "Da Nang11",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456708"
+            }, {
+                "employeeId": 12,
+                "firstName": "Anh12",
+                "lastName": "Tuan12",
+                "address1": "Quang Nam12",
+                "address2": "Da Nang12",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456709"
+            }, {
+                "employeeId": 13,
+                "firstName": "Anh13",
+                "lastName": "Tuan13",
+                "address1": "Quang Nam13",
+                "address2": "Da Nang13",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456710"
+            }, {
+                "employeeId": 14,
+                "firstName": "Anh14",
+                "lastName": "Tuan14",
+                "address1": "Quang Nam14",
+                "address2": "Da Nang14",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456711"
+            }, {
+                "employeeId": 15,
+                "firstName": "Anh15",
+                "lastName": "Tuan15",
+                "address1": "Quang Nam15",
+                "address2": "Da Nang15",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456712"
+            }, {
+                "employeeId": 16,
+                "firstName": "Anh16",
+                "lastName": "Tuan16",
+                "address1": "Quang Nam16",
+                "address2": "Da Nang16",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456713"
+            }, {
+                "employeeId": 17,
+                "firstName": "Anh17",
+                "lastName": "Tuan17",
+                "address1": "Quang Nam17",
+                "address2": "Da Nang17",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456714"
+            }, {
+                "employeeId": 18,
+                "firstName": "Anh18",
+                "lastName": "Tuan18",
+                "address1": "Quang Nam18",
+                "address2": "Da Nang18",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456715"
+            }, {
+                "employeeId": 19,
+                "firstName": "Anh19",
+                "lastName": "Tuan19",
+                "address1": "Quang Nam19",
+                "address2": "Da Nang19",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456716"
+            }, {
+                "employeeId": 20,
+                "firstName": "Anh20",
+                "lastName": "Tuan20",
+                "address1": "Quang Nam20",
+                "address2": "Da Nang20",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456717"
+            }, {
+                "employeeId": 21,
+                "firstName": "Anh21",
+                "lastName": "Tuan21",
+                "address1": "Quang Nam21",
+                "address2": "Da Nang21",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456718"
+            }, {
+                "employeeId": 22,
+                "firstName": "Anh22",
+                "lastName": "Tuan22",
+                "address1": "Quang Nam22",
+                "address2": "Da Nang22",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456719"
+            }, {
+                "employeeId": 23,
+                "firstName": "Anh23",
+                "lastName": "Tuan23",
+                "address1": "Quang Nam23",
+                "address2": "Da Nang23",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456720"
+            }, {
+                "employeeId": 24,
+                "firstName": "Anh24",
+                "lastName": "Tuan24",
+                "address1": "Quang Nam24",
+                "address2": "Da Nang24",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456721"
+            }, {
+                "employeeId": 25,
+                "firstName": "Anh25",
+                "lastName": "Tuan25",
+                "address1": "Quang Nam25",
+                "address2": "Da Nang25",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456722"
+            }, {
+                "employeeId": 26,
+                "firstName": "Anh26",
+                "lastName": "Tuan26",
+                "address1": "Quang Nam26",
+                "address2": "Da Nang26",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456723"
+            }, {
+                "employeeId": 27,
+                "firstName": "Anh27",
+                "lastName": "Tuan27",
+                "address1": "Quang Nam27",
+                "address2": "Da Nang27",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456724"
+            }, {
+                "employeeId": 28,
+                "firstName": "Anh28",
+                "lastName": "Tuan28",
+                "address1": "Quang Nam28",
+                "address2": "Da Nang28",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456725"
+            }, {
+                "employeeId": 29,
+                "firstName": "Anh29",
+                "lastName": "Tuan29",
+                "address1": "Quang Nam29",
+                "address2": "Da Nang29",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456726"
+            }, {
+                "employeeId": 30,
+                "firstName": "Anh30",
+                "lastName": "Tuan30",
+                "address1": "Quang Nam30",
+                "address2": "Da Nang30",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456727"
+            }, {
+                "employeeId": 31,
+                "firstName": "Anh31",
+                "lastName": "Tuan31",
+                "address1": "Quang Nam31",
+                "address2": "Da Nang31",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456728"
+            }, {
+                "employeeId": 32,
+                "firstName": "Anh32",
+                "lastName": "Tuan32",
+                "address1": "Quang Nam32",
+                "address2": "Da Nang32",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456729"
+            }, {
+                "employeeId": 33,
+                "firstName": "Anh33",
+                "lastName": "Tuan33",
+                "address1": "Quang Nam33",
+                "address2": "Da Nang33",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456730"
+            }, {
+                "employeeId": 34,
+                "firstName": "Anh34",
+                "lastName": "Tuan34",
+                "address1": "Quang Nam34",
+                "address2": "Da Nang34",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456731"
+            }, {
+                "employeeId": 35,
+                "firstName": "Anh35",
+                "lastName": "Tuan35",
+                "address1": "Quang Nam35",
+                "address2": "Da Nang35",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456732"
+            }, {
+                "employeeId": 36,
+                "firstName": "Anh36",
+                "lastName": "Tuan36",
+                "address1": "Quang Nam36",
+                "address2": "Da Nang36",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456733"
+            }, {
+                "employeeId": 37,
+                "firstName": "Anh37",
+                "lastName": "Tuan37",
+                "address1": "Quang Nam37",
+                "address2": "Da Nang37",
+                "email": "voanhtuan3@gmail.com",
+                "phoneNumber": "123456734"
+            }]
+
+            data.map(function(value, key) {
+                html +=
+                    "<tr>" +
+                    "<td>" + value.employeeId + "</td>" +
+
+                    "<td>" + value.firstName + "</td>" +
+
+                    "<td>" + value.lastName + "</td>" +
+
+                    "<td>" + value.address1 + "</td>" +
+
+                    "<td>" + value.address2 + "</td>" +
+
+                    "<td>" + value.email + "</td>" +
+
+                    "<td>" + value.phoneNumber + "</td>" +
+                    "</tr>";
+            })
+
+            $("table  tbody").append(html);
+        })
+    </script>
+</body>
+
+</html>

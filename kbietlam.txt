@@ -1,0 +1,52 @@
+Tao 1 form có 2 input: username và email
+- click submit form thi lấy 2 value trên dua vao obj, nhớ kiêm tra xem user va email da nhap chua, chứa thi báo lỗi.
+- ok hết thi đưa vào obj
+
+click tiếp lân 2, 3 thi tuong tư nhu trên, đưa toàn bộ vào obj cha như sau:
+{
+    'leviettam': {
+        'xx': 'leviettam'
+        'yy': 'ac@gmail.com'
+    },
+    ‘letam’: {
+        'xx': 'letam'
+        'yy': 'ac@gmail.com'
+    },
+    'tam': {
+        'xx': 'tam'
+        'yy': 'ac@gmail.com'
+    },
+} 
+
+GOI Y:
+
+nghia la khi e click lan dau thi e phai tao dc obj con nhu sau
+Lấy "xx" va "yy" làm key của objCon, 
+  {
+        'xx': 'leviettam'
+        'yy': 'ac@gmail.com'
+    }
+
+Sau do dua vao OBJ CHA như sau.
+(và lây chinh obj này đưa vào objCha va dùng value cua username làm key khi dua vao objCha)
+
+{
+   'leviettam': {
+        'xx': 'leviettam'
+        'yy': 'ac@gmail.com'
+    }
+}
+=> sau đó dua vao localstroage để giữ lại.
+
+
+Khi nhap tiep thi add them vao:
+{
+   'leviettam': {
+        'xx': 'leviettam'
+        'yy': 'ac@gmail.com'
+    },
+    ‘letam’: {
+        'xx': 'letam'
+        'yy': 'ac@gmail.com'
+    }
+}

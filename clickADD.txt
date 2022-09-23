@@ -1,0 +1,16 @@
+click ADD TO CART thi lay: img, price, name, id 
+{ img:... price:... name:.. qty:... } 
+=> vao obj cha va dung chinh ID cua product lam key (id chua co thi e tu tao them vao html 6 id: 1-6) 
+{ 
+	1: { img:... price:... name:.. qty:... }, 
+	2: { img:... price:... name:.. qty:... }, 
+	3: { img:... price:... name:.. qty:... }
+} 
+- dung localstorage de luu data va chuyen qua trang khac 
+- co 1 obj tong va cac obj con 
+{ 
+  	1: { img:... price:... name:.. qty:... }, 
+ 	2: { img:... price:... name:.. qty:... }, 
+  	3: { img:... price:... name:.. qty:... } 
+} 
+dung MAP data ra table.

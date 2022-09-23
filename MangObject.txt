@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- // array la 1 mang co the chua nhieu gia tri // tao 1 mang rong var mang = []; // -them 4 data vao array bang ham push // mang.push('xin','chao','ban','nha'); mang.push(1,2,3,4); console.log(mang) // key: values // 0: "xin" // 1: "chao" // 2: "ban" //
+    3: "nha" // length: 4 // key: tu dong tao ra, bat dau = 0 va tang len, va luon
+    < 1 length 1 dvi // lay do dai` cua mang hoac dem trong co bnhieu phan tu // console.log(mang.length) // - lay 1 value trong array ra, lay bang key // cu phap: ten-arr[key] // console.log(mang[3]) //-hien thi tung value trong array ra, dung ham for (console
+        ra) for (var i=0 ; i < mang.length; i++){ // // console.log(mang[i]); } //- hien thi tung value trong array ra, dung ham MAP (console ra) // map la 1 vong lap nhu for mang.map(function(value, key){ // console.log(key) }) // tinh tong cac so co trong
+        mang sum=0 for (var i=0 ; i < mang.length; i++){ // sum=s um + mang[i] } tong=0 mang.map(function(value, key){ tong=t ong + value })  -->
+    <!-- <script>
+        var array = [];
+        array.push(1, 4, 3, 2, 5);
+        var sum = 0;
+        // Tính tổng các số có trong mảng
+        // Dùng map để tính tổng các số trong mảng
+        // array.map(function(key,value) {
+        //     sum = sum + key
+        // })
+
+        // console.log(sum)
+        // Dùng lenght để đếm tất cả các giá trị trong mảng
+        // console.log(array.length)
+
+
+
+        // Dùng for để tính tổng các phần tử trong mảng
+        // var tong = 0;
+        // for (var i = 0; i < array.length; i++) {
+        //     tong = tong + array[i]
+        // }
+
+        // console.log(tong)
+    </script> -->
+
+
+
+
+    <script>
+        // array la 1 mang co the chua nhieu gia tri
+
+        // tao 1 mang rong
+        var arr = [];
+
+        // -them 4 data vao array bang ham push
+        arr.push('xin', 'chao', 'ban', 'nha');
+        // mang.push(1,2,3,4); 
+        // console.log(mang)
+
+        // key: values
+        // 0: "xin"
+        // 1: "chao"
+        // 2: "ban"
+        // 3: "nha"
+        // length: 4
+
+        // key: tu dong tao ra, bat dau = 0 va tang len, va luon < 1 length 1 dvi
+
+        // lay do dai` cua mang hoac dem trong co bnhieu phan tu
+        // console.log(mang.length)
+
+
+        // - lay 1 value trong array ra, lay bang key
+        // cu phap: ten-arr[key]
+        // console.log(mang[3])
+
+
+        //-hien thi tung value trong array ra, dung ham for (console ra)
+        // for (var i = 0; i < mang.length; i++) { //
+        //     // console.log(mang[i]);
+        // }
+
+        //- hien thi tung value trong array ra, dung ham MAP (console ra)
+        // map la 1 vong lap nhu for
+
+
+        // mang.map(function(value, key) {
+        //     // console.log(key)
+        // })
+
+
+
+        // tinh tong cac so co trong mang
+        // sum = 0
+        // for (var i = 0; i < mang.length; i++) { //
+        //     sum = sum + mang[i]
+        // }
+
+
+        // tong = 0
+        // mang.map(function(value, key) {
+        //     tong = tong + value
+
+        // })
+
+
+
+        // var object giong mang, nhung có thể chứa mang/obj(da cap, 2 chieu)
+        // Tạo ra 1 mảng rỗng
+        var xx = {};
+
+        // them value vao obj thi co 2 cach
+        // cách 1
+        xx.email = "xx@xx.xx";
+        // Cách 2
+        xx['pass'] = 11111;
+
+        // console.log(xx)
+        // Kiểm tra độ dài của object
+        // console.log(Object.keys(xx).length)
+
+        // key: value
+        // email: "xx@xx.xx"
+        // pass: 11111
+
+        // key: do mnh tao ra
+        // value:có thể chứa mang/obj(da cap, 2 chieu)
+
+        // Thêm value của mảng vào trong ofject
+        // trong cặp ngoạc [''] là mình đặt tên ho key
+        xx['mang'] = arr;
+        // console.log(xx)
+
+
+        // Cú pháp lấy ra từ chào trong Array trong ofject
+        // console.log(xx["arr"][3])
+
+        // Cú pháp lấy email trong ofject
+        // console.log(xx["email"])
+
+        // Lấy tất cả các value trong ofject ra bằng cách
+        // Object.keys(xx).map(function(key, index) {
+        //     console.log(xx[key])
+        // })
+
+
+        // Tạo 1 ofject con
+        // var child = {
+        //     phone: 763,
+        //     name: "Le Viet Tam"
+        // }
+
+        // xx['ofjectChild'] = child;
+        // console.log(xx)
+
+
+        // cu phap lay ra: ten-obj/arr[key]
+        // console.log(xx['arr'][3])
+
+        // tao nhanh 1 obj con
+        // var yy = {
+        //     phone:1234,
+        //     name: "baovic"
+        // }
+
+        // xx['objCon'] = yy;
+        // console.log(xx['objCon']['name'])
+
+        // lay het all value ra
+        // Object.keys(xx).map(function(key, index) {
+        //     console.log(xx)
+        // xx[email]
+        // xx[pass]
+        // xx[arr]
+        // xx[objcon]
+        // })
+
+        Object.keys(xx).map(function(key) {
+                console.log(xx[key])
+            })
+            // localStorage: 
+            // - luu tru data tren trinh duyet
+            // - cho phep luu tru data o dang chuoi(string). 
+            // - arr/obj -> k nhan, convert sang string
+
+
+        // localStorage.setItem("xuyen", JSON.stringify(xx))
+    </script>
+    <script>
+        // localStorage: 
+        // - luu tru data tren trinh duyet
+        // - cho phep luu tru data o dang chuoi(string). 
+        // - arr/obj -> k nhan, convert sang string=> dua vao
+
+
+        // localStorage.setItem("tam", JSON.stringify(xx))
+
+        // // // ---------------------------------------------- //
+        // var xx = localStorage.getItem("tam")
+
+        // // nho kiem tra lay data ra co k?
+        // if (xx) {
+        //     // chuyen ve lai trang thai cu
+        //     xx = JSON.parse(xx)
+        //     console.log(xx)
+        // }
+    </script>
+
+</body>
+
+</html>
